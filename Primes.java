@@ -2,13 +2,13 @@ import java.util.Scanner;
 public class Primes {
 	public static void main(String[] args) {
 		Scanner in=new Scanner(System.in);
-		System.out.print("Введите число ");
+		System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ ");
 		int n=in.nextInt();
-		System.out.print("Простые числа: ");
+		System.out.print("РџСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°: ");
 		isPrime(n);
 	}
 	public static void isPrime(int n) {
-		//Проверка на простое число
+		//РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРѕСЃС‚РѕРµ С‡РёСЃР»Рѕ
 		boolean prime;
 		for (int i=2;i<=n;i++) {
 			prime=true;
