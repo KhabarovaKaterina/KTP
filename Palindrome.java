@@ -2,12 +2,12 @@ import java.util.Scanner;
 public class Palindrome {
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
-		System.out.print("Введите строку ");
+		System.out.print("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ ");
 		String st=scan.next();
 		if(reverseString(st))
-			System.out.print("Строка - палиндром");
+			System.out.print("РЎС‚СЂРѕРєР° - РїР°Р»РёРЅРґСЂРѕРј");
 		else
-			System.out.print("Строка - не палиндром");
+			System.out.print("РЎС‚СЂРѕРєР° - РЅРµ РїР°Р»РёРЅРґСЂРѕРј");
 	}
 	public static boolean reverseString(String s) {
 		for(int i=0;i<s.length();i++)
