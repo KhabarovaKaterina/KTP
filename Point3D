@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class Point3D
+	{
+	double x;
+	double y;
+	double z;
+	Point3D(double x, double y, double z)
+	{	
+		this.x=x;
+		this.y=y;
+		this.z=z;
+	}
+	Point3D()
+	{	
+		this.x=0.0;
+		this.y=0.0;
+		this.z=0.0;
+	}
+	double getX()
+	{	
+		return x;
+	}
+	double getY()
+	{	
+		return y;
+	}
+	double getZ()
+	{	
+		return z;
+	}
+	void setX(double x)
+	{	
+		this.x=x;
+	}
+	void setY(double y)
+	{	
+		this.y=y;
+	}
+	void setZ(double z)
+	{	
+		this.z=z;
+	}
+	public static boolean method(Point3D a, Point3D b)
+	{ 	
+		return (a.x == b.x && a.y == b.y && a.z == b.z); 
+	} 
+	public static double distanceTo(Point3D a, Point3D b)
+	{ 	
+		return Math.sqrt(Math.pow((b.x - a.x), 2) + Math.pow((b.y - a.y), 2) + Math.pow((b.z - a.z), 2)); 
+	} 
+	public static void input(Point3D a)
+	{ 	
+		Scanner scan = new Scanner(System.in); 
+		System.out.print("x: "); 
+		double x = scan.nextDouble(); 
+		a.setX(x); 
+		System.out.print("y: "); 
+		double y = scan.nextDouble(); 
+		a.setY(y); 
+		System.out.print("z: "); 
+		double z = scan.nextDouble(); 
+		a.setZ(z); 
+	}
+	public static void output(Point3D a)
+	{ 	
+		System.out.print("x = " + a.getX() + '\n'); 
+		System.out.print("y = " + a.getY() + '\n'); 
+		System.out.print("z = " + a.getZ() + "\n"); 
+
+	} 
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Point3D first = new Point3D(1.0, 2.0, 3.0); 
+		Point3D second = new Point3D(); 
+		System.out.print("Введите координаты точки A\n"); 
+		input(first); 
+		System.out.print("Введите координаты точки B\n"); 
+		input(second); 
+		System.out.print("Первая точка = \n"); 
+		output(first); 
+		System.out.print("Вторая точка = \n"); 
+		output(second); 
+		if(Point3D.method(first, second)) 
+			System.out.print("Точки равны!\n"); 
+		else 
+			System.out.print("Точки не равны!\n"); 
+		System.out.print("Расстояние между двумя точками в пространстве: " + distanceTo(first, second)); 
+	} 
+}
