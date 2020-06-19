@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class Point2d {
+	int x;
+	int y;
+	Point2d(int x, int y)
+	{
+		this.x=x;
+		this.y=y;
+	}
+	Point2d()
+	{
+		this.x=0;
+		this.y=0;
+	}
+	int getX()
+	{
+		return x;
+	}
+	int getY()
+	{
+		return y;
+	}
+	void setX(int x)
+	{
+		this.x=x;
+	}
+	void setY(int y)
+	{
+		this.y=y;
+	}
+	public static boolean method(Point2d a, Point2d b)
+	{ 	
+		return (a.x == b.x && a.y == b.y); 
+	}
+	public static double distanceTo(Point2d a, Point2d b){ 
+		
+		return Math.sqrt(Math.pow((b.x - a.x), 2) + Math.pow((b.y - a.y), 2)); 
+	} 
+	public static void input(Point2d a)
+	{ 	
+		Scanner scan = new Scanner(System.in); 
+		System.out.print("x: "); 
+		int x = scan.nextInt(); 
+		a.setX(x); 
+		System.out.print("y: "); 
+		int y = scan.nextInt(); 
+		a.setY(y); 
+	} 
+	public static void output(Point2d a)
+	{ 	
+		System.out.print("x = " + a.getX() + '\n'); 
+		System.out.print("y = " + a.getY() + '\n'); 
+	} 
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Point2d myPoint=new Point2d();
+		Point2d myOtherPoint=new Point2d();
+		System.out.print("Введите координаты первой точки\n"); 
+		input(myPoint);
+		System.out.print("Введите координаты второй точки\n"); 
+		input(myOtherPoint); 
+		System.out.print("Первая точка = \n"); 
+		output(myPoint);
+		System.out.print("Вторая точка = \n"); 
+		output(myOtherPoint); 
+		System.out.print("Расстояние между двумя точками = " + distanceTo(myPoint, myOtherPoint));
+	}
+
+}
